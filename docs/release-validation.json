@@ -8,7 +8,8 @@
   "python": {
     "command": "python -B test.py",
     "passed": 606,
-    "failures": 0
+    "failures": 0,
+    "version": "3.12.14"
   },
   "javascript": {
     "command": "node --test tests/*.mjs (PowerShell expands file list explicitly)",
@@ -52,5 +53,7 @@
   "limits": [
     "Historical-data audit/replay scripts require the separately retained local artifacts.",
     "Engineering tests and synthetic demo do not establish predictive quality or empirical calibration."
-  ]
+  ],
+  "ci_runtime": "Python 3.12 on windows-latest",
+  "runtime_note": "The initial Python 3.11 CI run had four historical hash assertion failures. Sequential-sum replay reproduced all four hashes; differences were floating-point last digits. CI now matches the historical Python 3.12 baseline; no prediction logic or assertions changed."
 }

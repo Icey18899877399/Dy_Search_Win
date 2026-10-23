@@ -6,7 +6,7 @@
 
 ## 快速运行
 
-Python 3.11+；Python运行与测试仅使用标准库。前端无需构建，ECharts已随仓库保存。Node.js 22+仅用于前端逻辑测试。开发与本次发布在Windows / PowerShell验证。
+推荐Python 3.12（CI与历史哈希回归基准）；源码最低版本为3.11，但跨版本浮点求和可能改变末位数值，完整逐字哈希回归请使用3.12。Python运行与测试仅使用标准库。前端无需构建，ECharts已随仓库保存。Node.js 22+仅用于前端逻辑测试。开发与本次发布在Windows / PowerShell验证。
 
 ```powershell
 git clone https://github.com/Icey18899877399/Dy_Search_Win.git
