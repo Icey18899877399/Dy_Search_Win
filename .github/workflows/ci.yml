@@ -1,0 +1,31 @@
+name: Source validation
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Python behavior and integration tests
+        run: python -B test.py
+      - name: Frontend model tests
+        shell: pwsh
+        run: |
+          $tests = @(Get-ChildItem tests -Filter '*.mjs' | ForEach-Object { $_.FullName })
+          node --test @tests
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Offline synthetic demonstration
+        run: python -B run.py demo --output artifacts/ci-demo

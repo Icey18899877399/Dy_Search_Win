@@ -1,0 +1,31 @@
+{
+  "market_id": "2354063",
+  "event_id": "41359",
+  "question": "Israeli parliament dissolved by July 31?",
+  "description": "This market will resolve to \"Yes\" if the sitting Israeli Knesset (Israel's parliament), as of this market's inception, is dissolved between January 27 and July 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market is official information from the government of Israel; however, a consensus of credible reporting will also be used.",
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "observed_at": "2026-05-31T02:10:15.174471Z",
+  "metadata_quality": "full_metadata",
+  "source_file": "market/2026-05-31.json",
+  "cutoff": "2026-05-31T23:59:59.000000Z",
+  "target_elements": {
+    "subject": "Israeli parliament dissolved by July 31",
+    "time": "July 31"
+  },
+  "task_extraction": "typed_question_v5",
+  "element_aliases": {},
+  "matching_policy": "typed_v5",
+  "task_parse": {
+    "status": "unsupported",
+    "kind": "unsupported",
+    "conditions": []
+  },
+  "matching_warnings": [
+    "Unsupported task; no evidence admission"
+  ],
+  "scheduler_policy": "grid_credit_v2",
+  "semantic_policy": "fact_v3"
+}

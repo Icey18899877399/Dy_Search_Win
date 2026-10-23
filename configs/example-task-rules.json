@@ -1,0 +1,6 @@
+{
+  "target_elements": {"subject": "Aurora", "action": "launch", "object": "satellite", "time": "2026"},
+  "element_aliases": {"action": ["launched", "launches", "launch"], "subject": ["Aurora Agency"]},
+  "positive_patterns": ["Aurora (?:Agency )?(?:has )?launched the satellite"],
+  "negative_patterns": ["Aurora (?:Agency )?cancelled the satellite launch"]
+}

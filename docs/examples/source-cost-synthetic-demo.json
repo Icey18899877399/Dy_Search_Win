@@ -1,0 +1,61 @@
+{
+  "version": "patent_source_cost_v1",
+  "observations": [
+    {
+      "source_id": "Agency",
+      "interface_id": "synthetic-demo:Agency",
+      "observation_id": "fixture-only:Agency",
+      "observed_at": "2026-06-20T00:00:00+00:00",
+      "measurement_kind": "synthetic",
+      "response_latency_seconds": 1,
+      "rate_limit_quota": 10,
+      "returned_items": 2,
+      "observation_window": "synthetic fixture; no observed network interval",
+      "quota_unit": "requests/day"
+    },
+    {
+      "source_id": "Observatory",
+      "interface_id": "synthetic-demo:Observatory",
+      "observation_id": "fixture-only:Observatory",
+      "observed_at": "2026-06-20T00:00:00+00:00",
+      "measurement_kind": "synthetic",
+      "response_latency_seconds": 1,
+      "rate_limit_quota": 10,
+      "returned_items": 2,
+      "observation_window": "synthetic fixture; no observed network interval",
+      "quota_unit": "requests/day"
+    },
+    {
+      "source_id": "Wire A",
+      "interface_id": "synthetic-demo:Wire A",
+      "observation_id": "fixture-only:Wire A",
+      "observed_at": "2026-06-20T00:00:00+00:00",
+      "measurement_kind": "synthetic",
+      "response_latency_seconds": 1,
+      "rate_limit_quota": 10,
+      "returned_items": 2,
+      "observation_window": "synthetic fixture; no observed network interval",
+      "quota_unit": "requests/day"
+    },
+    {
+      "source_id": "Wire B",
+      "interface_id": "synthetic-demo:Wire B",
+      "observation_id": "fixture-only:Wire B",
+      "observed_at": "2026-06-20T00:00:00+00:00",
+      "measurement_kind": "synthetic",
+      "response_latency_seconds": 1,
+      "rate_limit_quota": 10,
+      "returned_items": 2,
+      "observation_window": "synthetic fixture; no observed network interval",
+      "quota_unit": "requests/day"
+    }
+  ],
+  "weights": {
+    "response_latency_seconds": 0.2,
+    "rate_limit_quota": 0.3,
+    "returned_items": 0.5
+  },
+  "base_cost": 1,
+  "budget_unit": "simulation_units",
+  "base_time_unit": "day"
+}

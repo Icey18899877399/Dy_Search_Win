@@ -1,0 +1,23 @@
+{
+  "purpose": "Exact frozen task definitions for regression tests; no news bodies, predictions, credentials or outcome labels.",
+  "records": [
+    {
+      "market_id": "1171663",
+      "file": "1171663.json",
+      "sha256": "50f4c2f790ffff70b0e37e41cf5004be19ab0365ce0e6f6ef914e442d663d83d",
+      "local_source": "artifacts/evidence-entry-check-20261023/runs/1171663/enhanced/inputs/task.json"
+    },
+    {
+      "market_id": "1423716",
+      "file": "1423716.json",
+      "sha256": "5cb9a5d4316094b798000ace7b1a7a446de9f7b6ec7c7cb813a825df823e4cda",
+      "local_source": "artifacts/evidence-entry-check-20261023/runs/1423716/enhanced/inputs/task.json"
+    },
+    {
+      "market_id": "2354063",
+      "file": "2354063.json",
+      "sha256": "3200ae7cf87a5ab62cdb773fbe3868ef18384413fdabb8d97eb3715633379621",
+      "local_source": "artifacts/evidence-entry-check-20261023/runs/2354063/enhanced/inputs/task.json"
+    }
+  ]
+}

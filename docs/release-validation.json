@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "date": "2026-10-23",
+  "scope": "source-only export of the Git staging tree, without original artifacts, index, news data or model cache",
+  "tested_source_tree": "ac92086e003fee6cef5a02042ebc9f26482c3eb1",
+  "tested_source_files": 243,
+  "tested_source_bytes": 2832398,
+  "python": {
+    "command": "python -B test.py",
+    "passed": 606,
+    "failures": 0
+  },
+  "javascript": {
+    "command": "node --test tests/*.mjs (PowerShell expands file list explicitly)",
+    "passed": 44,
+    "failures": 0
+  },
+  "synthetic_demo": {
+    "command": "python -B run.py demo --output artifacts/release-demo",
+    "passed": true,
+    "rounds": 12,
+    "is_real_prediction_evaluation": false
+  },
+  "http_checks": {
+    "/": {
+      "status": 200,
+      "bytes": 15366
+    },
+    "/api/fresh/status": {
+      "status": 200,
+      "bytes": 172
+    },
+    "/api/catalog": {
+      "status": 200,
+      "bytes": 33
+    }
+  },
+  "fixture_hashes_verified": 3,
+  "third_party_hashes_verified": 3,
+  "credential_pattern_scan": {
+    "findings": 0,
+    "scope": "all 243 staged source payload files before this summary was added; pattern-based check"
+  },
+  "files_over_10_mib": 0,
+  "model_requests": 0,
+  "independent_evaluation": false,
+  "log_sha256": {
+    "python-tests.log": "90e2c14cb2cf10e8ea824ce206a5231b22fe721433811b11eac221580f190983",
+    "frontend-tests.log": "7b7fd656efa3bcbbbb130ac4b274c9b659d2733f083ddf7a6c0b392ecb784673",
+    "demo.log": "8304724f82992d20d439255cc5b849949c6f16846df28fe8db8a3815d165f13e"
+  },
+  "limits": [
+    "Historical-data audit/replay scripts require the separately retained local artifacts.",
+    "Engineering tests and synthetic demo do not establish predictive quality or empirical calibration."
+  ]
+}

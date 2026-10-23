@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "event-dynamic-retrieval"
+version = "0.1.0"
+description = "Reproducible offline implementation of dynamic retrieval-window patent"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+dynamic-retrieval = "dynamic_retrieval.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,44 @@
+# Local data, generated experiments and runtime state
+/artifacts/
+/.runtime/
+/verification-history/
+/delivery-manifest.json
+/data/
+/cache/
+*.sqlite
+*.sqlite-*
+*.db
+*.log
+*.log.*
+*.pid
+*.tar
+*.zip
+
+# Credentials and local environments
+.env
+.env.*
+*.pem
+*.key
+.venv/
+venv/
+
+# Python/build/editor output
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Public docs contain source Markdown and explicit configuration examples only.
+# Historical reports/data remain available in the local workspace.
+/docs/*
+!/docs/*.md
+!/docs/examples/
+/docs/examples/*
+!/docs/examples/*.json
+!/docs/release-validation.json

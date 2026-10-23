@@ -1,0 +1,31 @@
+{
+  "market_id": "1423716",
+  "event_id": "226988",
+  "question": "Will Elon Musk post 1000-1039 tweets in April 2026?",
+  "description": "This market will resolve according to the number of times Elon Musk (@elonmusk), posts on X during the month of April 2026.\n\nFor the purposes of this market, only main feed posts, quote posts and reposts will count.\n\nReplies will NOT count towards the total - however, replies on the main feed such as https://x.com/elonmusk/status/1786073478711353576 will be counted by the tracker.\n\nDeleted posts will count as long as they remain available long enough to be captured by the tracker (~5 minutes).\n\nCommunity reposts which are not counted by the tracker not count toward the total.\n\nThe resolution source for this market is the 'Post Counter' figure for posts found at https://xtracker.polymarket.com. Individual posts can be viewed by clicking \"Export Data\". If the tracker does not update correctly in accordance with the rules, X itself may be used as a secondary resolution source.",
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "observed_at": "2026-04-30T12:32:43.360992Z",
+  "metadata_quality": "full_metadata",
+  "source_file": "market/2026-04-30.json",
+  "cutoff": "2026-04-30T23:59:59.000000Z",
+  "target_elements": {
+    "subject": "Elon Musk post 1000-1039 tweets in April 2026",
+    "time": "April 2026"
+  },
+  "task_extraction": "typed_question_v5",
+  "element_aliases": {},
+  "matching_policy": "typed_v5",
+  "task_parse": {
+    "status": "unsupported",
+    "kind": "unsupported",
+    "conditions": []
+  },
+  "matching_warnings": [
+    "Unsupported task; no evidence admission"
+  ],
+  "scheduler_policy": "grid_credit_v2",
+  "semantic_policy": "fact_v3"
+}

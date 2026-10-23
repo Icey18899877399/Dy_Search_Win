@@ -1,0 +1,15 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.yml text eol=lf
+*.txt text eol=lf
+*.svg text eol=lf
+
+# Preserve bytes covered by source/third-party integrity manifests.
+tests/fixtures/task-contracts/*.json -text
+web/vendor/* -text

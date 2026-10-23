@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {freshExecution,freshPreviewPayload} from '../web/fresh-model.mjs';
+const base={cutoff:'2026-05-15T23:59:59',count:1,max_documents:20};
+const values={execution_preset:'patent',cap_fraction:'.31',width_fraction:'.5',retrieval_policy:'bm25_read_guard_v1',evidence_policy:'patent_elements_v1'};
+const expected={budget_policy:'patent_budget_v1',grid_policy:{version:'patent_grid_v1',cap_fraction:.31,width_fraction:.5},retrieval_policy:'bm25_read_guard_v1',evidence_policy:'patent_elements_v1'};
+assert.deepEqual(freshExecution(values),expected);
+assert.deepEqual(freshExecution({execution_preset:'legacy'}),{});
+assert.equal(freshExecution({...values,cap_fraction:'.4'}).grid_policy.cap_fraction,.4);
+assert.throws(()=>freshExecution({...values,width_fraction:'0'}));
+assert.throws(()=>freshExecution({...values,retrieval_policy:'bogus'}));
+const p=freshPreviewPayload({...base,execution:expected,extraction_mode:'on_demand'});
+assert.deepEqual(p.execution,expected);assert.equal(p.extraction_mode,'on_demand');
+assert.throws(()=>freshPreviewPayload({...base,extraction_mode:'bad'}));
+console.log('fresh execution model tests passed');
